@@ -1,0 +1,17 @@
+{
+  "experiment_name": "glass_dataset",
+  "method_name": "splatfacto",
+  "checkpoint": "outputs/glass_dataset/splatfacto/2026-03-19_045954/nerfstudio_models/step-000029999.ckpt",
+  "results": {
+    "psnr": 31.60481834411621,
+    "psnr_std": 4.114758014678955,
+    "ssim": 0.9732733368873596,
+    "ssim_std": 0.00974307581782341,
+    "lpips": 0.08325638622045517,
+    "lpips_std": 0.03504757583141327,
+    "num_rays_per_sec": 48648184.0,
+    "num_rays_per_sec_std": 6612928.0,
+    "fps": 23.460737228393555,
+    "fps_std": 3.1891050338745117
+  }
+}
