@@ -48,7 +48,7 @@ Below are side-by-side comparisons of ground truth, baseline (no fix), and our m
 
 | Ground Truth | Baseline (No Fix) | Ours (Fixed) |
 |:---:|:---:|:---:|
-| ![GT](results/renders_01_no_fix/gt_fig2.jpg) | ![Baseline](results/renders_01_no_fix/base_fig2.jpg) | ![Fixed](results/renders_02_fixed/fix_fig2.jpg) |
+| ![GT](results/renders_no_fix/0012.jpg) | ![Baseline](results/rendersno_fix/0012.jpg) | ![Fixed](results/renders_fixed/0012.jpg) |
 
 The baseline produces a dense opaque fog where the glass should be transparent.
 Our fix reveals the checkerboard pattern through the glass and recovers the
