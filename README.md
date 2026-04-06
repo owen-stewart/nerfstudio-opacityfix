@@ -35,52 +35,36 @@ transmittance of glass. Zero changes to training are required.
 | LPIPS  | 0.1261   | 0.0833   | −34%        |
 
 ---
-
 ---
 
 ## Visual Results
 
-Below are side-by-side comparisons of ground truth, baseline (no fix), and our method.
-
 ---
 
-### Best Case — Front-Facing View
+### Best Case — Frame 0012 (Front-Facing View)
 
 | Ground Truth | Baseline (No Fix) | Ours (Fixed) |
 |:---:|:---:|:---:|
-| ![GT](results/renders_no_fix/0012.jpg) | ![Baseline](results/rendersno_fix/0012.jpg) | ![Fixed](results/renders_fixed/0012.jpg) |
+| ![GT](results/renders_fixed/test/gt-rgb/0012.jpg) | ![Baseline](results/renders_no_fix/test/rgb/0012.jpg) | ![Fixed](results/renders_fixed/test/rgb/0012.jpg) |
 
-The baseline produces a dense opaque fog where the glass should be transparent.
+The baseline produces dense opaque fog where the glass should be transparent.
 Our fix reveals the checkerboard pattern through the glass and recovers the
-correct transparent appearance. The specular highlight on the glass edge is
-also visible, matching the ground truth.
+correct transparent appearance.
 
 ---
 
-### Worst Case — Grazing Angle View
+### Partial Fix — Frame 0030 (Grazing Angle View)
 
 | Ground Truth | Baseline (No Fix) | Ours (Fixed) |
 |:---:|:---:|:---:|
-| ![GT](results/renders_01_no_fix/gt_fig3.jpg) | ![Baseline](results/renders_01_no_fix/base_fig3.jpg) | ![Fixed](results/renders_02_fixed/fix_fig3.jpg) |
+| ![GT](results/renders_fixed/test/gt-rgb/0030.jpg) | ![Baseline](results/renders_no_fix/test/rgb/0030.jpg) | ![Fixed](results/renders_fixed/test/rgb/0030.jpg) |
 
 At shallow viewing angles our method shows partial improvement. Fresnel physics
 correctly predicts high reflectance at grazing angles so opacity is intentionally
-suppressed less. The ground truth shows sharp mirror-like reflections that our
-lightweight fix cannot fully reproduce — this requires explicit reflection
-rendering and is acknowledged as a limitation.
+suppressed less. Full mirror-like reflection requires explicit reflection
+rendering which is beyond the scope of a render-time injection.
 
 ---
-
-### Fog Failure vs Best Fix
-
-| Worst Baseline Frame | Best Fixed Frame |
-|:---:|:---:|
-| ![Worst](results/renders_01_no_fix/f86_stock.jpg) | ![Best](results/renders_02_fixed/f86_fixed.jpg) |
-
-The most extreme failure case compared directly to our best result from the
-same camera position. The glass goes from nearly fully opaque to clearly
-transparent.
-
 ---
 
 ## Repository Structure
