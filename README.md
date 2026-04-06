@@ -49,10 +49,10 @@ dataset/
   transforms_val.json      Camera poses — validation split
   transforms_test.json     Camera poses — test split
 results/
-  eval_01_no_fix.json      Quantitative metrics — baseline (no fix)
-  eval_02_fixed.json       Quantitative metrics — our fix
-  renders_01_no_fix/       Rendered frames from stock Splatfacto
-  renders_02_fixed/        Rendered frames from our modified Splatfacto
+  eval_no_fix.json      Quantitative metrics — baseline (no fix)
+  eval_fixed.json       Quantitative metrics — our fix
+  renders_no_fix/       Rendered frames from stock Splatfacto
+  renders_fixed/        Rendered frames from our modified Splatfacto
 PDF/
   report.pdf               IEEE-format project report
 ```
