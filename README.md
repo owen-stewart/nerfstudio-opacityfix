@@ -36,6 +36,53 @@ transmittance of glass. Zero changes to training are required.
 
 ---
 
+---
+
+## Visual Results
+
+Below are side-by-side comparisons of ground truth, baseline (no fix), and our method.
+
+---
+
+### Best Case — Front-Facing View
+
+| Ground Truth | Baseline (No Fix) | Ours (Fixed) |
+|:---:|:---:|:---:|
+| ![GT](results/renders_01_no_fix/gt_fig2.jpg) | ![Baseline](results/renders_01_no_fix/base_fig2.jpg) | ![Fixed](results/renders_02_fixed/fix_fig2.jpg) |
+
+The baseline produces a dense opaque fog where the glass should be transparent.
+Our fix reveals the checkerboard pattern through the glass and recovers the
+correct transparent appearance. The specular highlight on the glass edge is
+also visible, matching the ground truth.
+
+---
+
+### Worst Case — Grazing Angle View
+
+| Ground Truth | Baseline (No Fix) | Ours (Fixed) |
+|:---:|:---:|:---:|
+| ![GT](results/renders_01_no_fix/gt_fig3.jpg) | ![Baseline](results/renders_01_no_fix/base_fig3.jpg) | ![Fixed](results/renders_02_fixed/fix_fig3.jpg) |
+
+At shallow viewing angles our method shows partial improvement. Fresnel physics
+correctly predicts high reflectance at grazing angles so opacity is intentionally
+suppressed less. The ground truth shows sharp mirror-like reflections that our
+lightweight fix cannot fully reproduce — this requires explicit reflection
+rendering and is acknowledged as a limitation.
+
+---
+
+### Fog Failure vs Best Fix
+
+| Worst Baseline Frame | Best Fixed Frame |
+|:---:|:---:|
+| ![Worst](results/renders_01_no_fix/f86_stock.jpg) | ![Best](results/renders_02_fixed/f86_fixed.jpg) |
+
+The most extreme failure case compared directly to our best result from the
+same camera position. The glass goes from nearly fully opaque to clearly
+transparent.
+
+---
+
 ## Repository Structure
 
 ```
