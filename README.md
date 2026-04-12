@@ -9,7 +9,7 @@ Owen Stewart · Dylan Gordon
 
 **Full reproduction walkthrough — watch before running:**
 
-[![Demo Video](https://img.youtube.com/vi/bRcr_rPFkQA/0.jpg)](https://youtu.be/bRcr_rPFkQA)
+[![Demo Video](https://img.youtube.com/vi/xxg0i2MAgyE/0.jpg)](https://youtu.be/xxg0i2MAgyE)
 
 > Full reproduction walkthrough of our physics-based glass fix for 3D Gaussian Splatting.
 > Demonstrates environment setup on vast.ai, cloning the repository, injecting the fix
